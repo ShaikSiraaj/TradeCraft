@@ -1,0 +1,6 @@
+{
+  "name": "Trade Craft",
+  "description": "An interactive, gamified trading education academy featuring a comprehensive curriculum, live-market simulators, and volume analysis guides.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

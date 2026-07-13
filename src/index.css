@@ -1,1 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500;600;700;800&family=Source+Sans+3:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --color-market-navy: #ffffff;
+  --color-growth-green: #a5b4fc; /* Vibrant light indigo focus color */
+  --color-success-light: rgba(165, 180, 252, 0.12); /* Translucent glow purple */
+  --color-accent-blue: #818cf8; /* Bright lavender accent */
+  --color-slate-gray: rgba(255, 255, 255, 0.55);
+  --color-background-soft: #050505; /* Deep black space background */
+  --color-surface-border: rgba(255, 255, 255, 0.08); /* Minimalist glass border */
+
+  --color-white: rgba(255, 255, 255, 0.03); /* Transforms bg-white cards into glass panels automatically */
+  --color-slate-50: rgba(255, 255, 255, 0.02);
+  --color-slate-100: rgba(255, 255, 255, 0.06);
+  --color-slate-200: rgba(255, 255, 255, 0.1);
+  --color-slate-300: rgba(255, 255, 255, 0.2);
+  --color-slate-400: rgba(255, 255, 255, 0.45);
+  --color-slate-500: rgba(255, 255, 255, 0.6);
+  --color-slate-600: rgba(255, 255, 255, 0.8);
+  --color-slate-700: rgba(255, 255, 255, 0.9);
+  --color-slate-800: rgba(255, 255, 255, 0.15);
+  --color-slate-900: #0a0a0c;
+
+  --color-sky-50: rgba(129, 140, 248, 0.05);
+  --color-sky-100: rgba(129, 140, 248, 0.1);
+  --color-emerald-50: rgba(165, 180, 252, 0.05);
+  --color-emerald-100: rgba(165, 180, 252, 0.15);
+  --color-emerald-200: rgba(165, 180, 252, 0.25);
+  --color-emerald-600: #a5b4fc;
+  --color-emerald-800: #ffffff;
+
+  --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Hanken Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background-soft);
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+
+/* Glassmorphism Global Card Overrides */
+.bg-white {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+}
+
+/* Standardize lists and sub-headers to remain highly visible */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff !important;
+  letter-spacing: -0.02em;
+}
+
+/* Navigation items hover states */
+.hover\:bg-slate-50:hover {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+.hover\:bg-slate-100:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+.bg-slate-50 {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+.bg-slate-100 {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Ensure secondary texts remain elegant with high opacity */
+.text-slate-500, .text-slate-gray {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+.text-slate-400 {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+.text-slate-600 {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Input Fields and Selects in Simulator */
+input[type="text"], input[type="number"], select {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+}
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Custom glow elements and rings from Immersive UI */
+.ring-glow {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Glowing buttons with high-contrast content */
+.bg-growth-green {
+  background-color: #ffffff !important;
+  color: #050505 !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease-in-out;
+}
+.bg-growth-green:hover {
+  background-color: #e0e7ff !important;
+  box-shadow: 0 0 20px rgba(165, 180, 252, 0.4);
+}
+.bg-growth-green * {
+  color: #050505 !important;
+}
+
+/* Custom scrollbar utility */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
